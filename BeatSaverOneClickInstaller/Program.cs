@@ -49,6 +49,8 @@ namespace BeatSaverOneClickInstaller
             File.WriteAllBytes(savePath, fileContent);
 
             System.IO.Compression.ZipFile.ExtractToDirectory(savePath, extractPath);
+            
+            File.Delete(savePath);
         }
     }
 }
